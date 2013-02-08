@@ -164,10 +164,10 @@ module Padrino
         end
 
         ##
-        # Returns the name of the project module humanize them for you.
+        # Returns the name of the project module. If a symbol it translate/humanize them for you.
         #
         def human_name
-           @name.to_s.humanize
+          @name.is_a?(Symbol) ? I18n.t("padrino.admin.menu.#{@name}", :default => @name.to_s.humanize) : @name
         end
 
         ##
