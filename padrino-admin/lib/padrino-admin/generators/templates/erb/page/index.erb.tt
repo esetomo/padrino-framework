@@ -27,7 +27,7 @@
         <%- @orm.columns.each_with_index do |column, i| -%>
         <th class="header"> <%%= mat(:<%= @orm.name_singular %>, :<%= column.name %>) %></th>
         <%- end -%>
-        <th class="header action"> Action</th>
+        <th class="header action"> <%%= pat(:action) %></th>
     </thead>
 
     <tbody>
