@@ -82,7 +82,7 @@ module Padrino
         #
         def tag_icon(icon, tag = nil)
           content = content_tag(:i, '', :class=> "icon-#{icon.to_s}")
-          content << " #{tag.to_s}"
+          content << " #{pat(tag)}" if tag
         end
       end # ViewHelpers
     end # Helpers
