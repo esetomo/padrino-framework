@@ -22,7 +22,7 @@ div class="tabs-content"
 
                 == link_to tag_icon(:trash, 'Delete Checked'),'#', 'data-form' =>'#multiple_delete_form', 'data-cancel' => 'Cancel','data-title' => 'Warning: Multiple delete !', 'data-type' => 'danger', :id => 'btn_multiple_delete'
         <%- @orm.columns.each_with_index do |column, i| -%>
-        th class='header' == :<%= column.name %>
+        th class='header' == mat(:<%= @orm.name_singular %>, :<%= column.name %>)
         <%- end -%>
         th class='header action' Action
 
