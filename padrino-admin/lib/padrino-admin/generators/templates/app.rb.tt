@@ -35,7 +35,7 @@ class Admin < Padrino::Application
   end
 
   breadcrumbs = Padrino::Helpers::Breadcrumb.new
-  breadcrumbs.set_home '/admin', 'Admin'
+  breadcrumbs.set_home '/admin', I18n.t("padrino.admin.admin", :default => "Admin")
   set :breadcrumbs, breadcrumbs
 
 end
